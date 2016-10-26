@@ -1,0 +1,47 @@
+<div layout = "column" layout-align = "center center">
+    <md-card class = "loginCard md-whiteframe-z3" style = "width : 80%">
+        <md-card-title>
+            <md-card-title-text layout = "column" layout-align = "center center">
+              <span class="md-headline">Shopping Details</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-content class="md-padding">
+            <form name = "shoppingForm">
+                <div layout = "column" layout-align = "center center">
+                    <md-input-container style = "width : 200px">
+                      <label>Looking For</label>
+                      <input type="text" required="" name = "lookingFor" ng-model = "shoppingDetails.lookingFor">
+                      <div ng-messages = "shoppingForm.lookingFor.$error">
+                        <div ng-message = "required">This is required</div>
+                      </div>
+                    </md-input-container>
+                    <md-input-container style = "width : 200px;vertical-align:center">
+                        <label>Budget</label>
+                        <md-select ng-model = "shoppingDetails.budget">
+                          <md-option value = "<1000"> < 1000 </md-option>
+                          <md-option value = "1000-2000">1000 - 2000</md-option>
+                          <md-option value = "2000-5000">2000 - 5000</md-option>
+                          <md-option value = "5000-10000">5000 - 10000</md-option>
+                          <md-option value = ">10000"> > 10000</md-option>
+                        </md-select>
+                        <md-icon md-font-icon="fa-rupee" class = "fa fa-2x"></md-icon>
+                    </md-input-container>
+                    <md-input-container style = "width : 200px;vertical-align:center">
+                        <label>Category</label>
+                        <md-select ng-model = "shoppingDetails.category">
+                          <md-option ng-value = "category" ng-repeat = "category in categories" value = {{category}}>{{category}} </md-option>
+                        </md-select>
+                        <md-icon md-font-icon="fa-tags" class = "fa fa-2x"></md-icon>
+                    </md-input-container>
+                    <md-input-container class = "md-block">
+                      <label>Remarks</label>
+                      <textarea name = "remarks" columns="1" md-maxlength="150" rows="5" ng-model = "shoppingDetails.remarks"></textarea>
+                      <div ng-messages = "shoppingForm.remarks.$error">
+                      </div>
+                    </md-input-container>
+                    <md-button class = "md-raised md-primary" ng-click = "submit()" style = "width:200px">Submit</md-button>
+                </div>
+            </form>
+        </md-content>
+    </md-card>
+</div>

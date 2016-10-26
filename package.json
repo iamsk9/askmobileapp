@@ -1,0 +1,21 @@
+{
+  "name": "walkin-analytics-mobile",
+  "main": "server.js",
+  "version": "0.0.1",
+  "description": "An analytics mobile app for helping the officials to take decisions better.",
+  "author": "Haresh <haresh93@gmail.com>",
+  "cordova": {
+    "id": "cordova-plugin-spinner-dialog",
+    "platforms": [
+      "android",
+      "ios",
+      "wp8"
+    ]
+  },"dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "q": "^1.4.1",
+    "shelljs": "^0.7.4",
+    "which": "^1.2.11"
+  }
+}

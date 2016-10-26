@@ -1,0 +1,39 @@
+<div layout = "column" layout-align = "center center">
+    <md-card class = "loginCard md-whiteframe-z3" style = "width : 80%">
+        <md-card-title>
+            <md-card-title-text layout = "column" layout-align = "center center">
+              <span class="md-headline">Login</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-content class="md-padding" id="loginbox">
+            <form name = "loginForm">
+                <div layout = "column" layout-align = "center center">
+                    <md-input-container style = "width : 200px;vertical-align:center">
+                        <label>Select Your Store</label>
+                        <md-select ng-model = "login.store">
+                          <md-option value = "Visakhapatnam">Visakhapatnam</md-option>
+                          <md-option value = "MVP Colony">MVP Colony</md-option>
+                          <md-option value = "Kakinada">Kakinada</md-option>
+                          <md-option value = "JK Silks">JK Silks</md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container style = "width : 200px">
+                      <label>Username</label>
+                      <input type="text" required = "" name = "username" ng-model = "login.empId">
+                      <div ng-messages = "loginForm.username.$error">
+                        <div ng-message = "required">This is required</div>
+                      </div>
+                    </md-input-container>
+                    <md-input-container style = "width : 200px">
+                      <label>Password</label>
+                      <input type="password" required="" name = "password" ng-model = "login.password">
+                      <div ng-messages = "loginForm.password.$error">
+                        <div ng-message = "required">This is required</div>
+                      </div>
+                    </md-input-container>
+                    <md-button class = "md-raised md-primary" ng-click = "signin()" style = "width:200px">Sign In</md-button>
+                </div>
+            </form>
+        </md-content>
+    </md-card>
+</div>

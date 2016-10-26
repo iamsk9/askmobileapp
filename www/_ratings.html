@@ -1,0 +1,46 @@
+<div layout = "column" layout-align = "center center">
+    <md-card class = "loginCard md-whiteframe-z3" style = "width : 80%">
+        <md-card-title>
+            <md-card-title-text layout = "column" layout-align = "center center">
+              <span class="md-headline">Feedback Details</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-content class="md-padding">
+            <form name = "ratingsForm">
+                <div layout = "column" layout-align = "center center">
+                    <div layout = "column" layout-align = "center start" class = "ratingsWrapper">
+                      <label>Store Ambience</label>
+                      <input-stars max="5" ng-model = "ratings.storeAmbience"></input-stars>
+                    </div>
+                    <div layout = "column" layout-align = "center start" class = "ratingsWrapper">
+                      <label>Store Quality</label>
+                      <input-stars max="5" ng-model = "ratings.storeQuality"></input-stars>
+                    </div>
+                    <div layout = "column" layout-align = "center start" class = "ratingsWrapper">
+                      <label>Range of Products</label>
+                      <input-stars max="5" ng-model = "ratings.rangeOfProducts"></input-stars>
+                    </div>
+                    <div layout = "column" layout-align = "center start" class = "ratingsWrapper">
+                      <label>Quality of Service</label>
+                      <input-stars max="5" ng-model = "ratings.qualityOfService"></input-stars>
+                    </div>
+                    <md-input-container style = "width : 200px" layout-align = "center start" ng-hide="{{customerType}}">
+                      <label>Reason for Exchange</label>
+                      <input type="text" required="" name = "exchange" ng-model = "ratings.exchange">
+                      <div ng-messages = "ratingsForm.exchange.$error">
+                        <div ng-message = "required">This is required</div>
+                      </div>
+                    </md-input-container>
+                    <md-input-container style = "width : 200px" layout-align = "center start">
+                      <label>Any Suggestions</label>
+                      <input type="text" required="" name = "comments" ng-model = "ratings.suggestions">
+                      <div ng-messages = "ratingsForm.suggestions.$error">
+                        <div ng-message = "required">This is required</div>
+                      </div>
+                    </md-input-container>
+                    <md-button class = "md-raised md-primary" ng-click = "next()" style = "width:200px">Next</md-button>
+                </div>
+            </form>
+        </md-content>
+    </md-card>
+</div>
