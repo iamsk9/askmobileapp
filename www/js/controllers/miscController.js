@@ -1,4 +1,4 @@
-walkinApp.controller("ratingsController", function($scope, informationService, $location,
+walkinApp.controller("miscController", function($scope, informationService, $location,
 	$cordovaToast, $cordovaSpinnerDialog, $window){
 	$scope.ratings = {};
 	$scope.next = function(){
@@ -15,26 +15,9 @@ walkinApp.controller("ratingsController", function($scope, informationService, $
 			},function(error){
 				console.log("OOPS error");
 			});
-			/*
-			$cordovaSpinnerDialog.show("","Loading",true);
-			informationService.setRatings($scope.ratings);
-			informationService.postToServer().then(function(data){
-				$cordovaSpinnerDialog.hide();
-				$cordovaToast.showLongBottom("Data Has been Saved.").then(function(){
-					$location.path('/home');
-				});
-			},function(error){
-				console.log("OOPS error");
-				$cordovaSpinnerDialog.hide();
-				$cordovaToast.showLongBottom("Request Unsuccessful.").then(function(){
-				});
-			});
-			*/
 		}
 		else
-		{/*
-			$cordovaToast.showLongBottom("Please fill all the details.").then(function(){
-			});*/
+		{
 			console.log("Enter Details");
 		}
 	}

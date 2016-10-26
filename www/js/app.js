@@ -58,19 +58,19 @@ walkinApp.config(function($mdThemingProvider, $mdIconProvider, $routeProvider,
     $routeProvider
         .when("/login", {
             templateUrl :  "home.html",
-            controller  : "loginController"
+            controller  : "homeController"
         })
         .when("/business", {
             templateUrl :  "business.html",
-            controller : "homeController"
+            controller : "businessController"
         })
         .when("/personal", {
             templateUrl :  "personal.html",
-            controller : "shoppingDetailsController"
+            controller : "personalController"
         })
         .when("/misc", {
             templateUrl : "misc.html",
-            controller : "ratingsController"
+            controller : "miscController"
         });
 });
 
