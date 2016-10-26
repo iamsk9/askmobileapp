@@ -2,7 +2,8 @@ walkinApp.controller("homeController", function($scope, informationService, $loc
 	$scope.info = {};
 	$rootScope.customerType = true;
 	$scope.next = function(){
-		if($scope.info.customerName != undefined && $scope.info.customerName != ""
+		 $location.path("/personal");
+		/*if($scope.info.customerName != undefined && $scope.info.customerName != ""
 			&& $scope.info.gender != undefined && $scope.info.gender != ""
 			&& $scope.info.type != undefined && $scope.info.type != ""
 			&& $scope.info.contactNumber != undefined && $scope.info.contactNumber != "")
@@ -22,6 +23,6 @@ walkinApp.controller("homeController", function($scope, informationService, $loc
 		{
 			$cordovaToast.showLongBottom("Please fill all the details.").then(function(){
 			});
-		}
+		}*/
 	}
 });

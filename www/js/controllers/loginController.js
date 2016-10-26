@@ -2,7 +2,8 @@ walkinApp.controller("loginController", function($scope, Restangular,$cordovaToa
 	$cordovaPreferences, $location, informationService, loginService, $window){
 
 	$scope.signin = function(){
-		if($scope.login != undefined && $scope.login.empId != "" && $scope.login.password != "")
+		$location.path("/business");
+		/*if($scope.login != undefined && $scope.login.empId != "" && $scope.login.password != "")
 		{
 			informationService.saveStore($scope.login.store);
 			loginService.logining($scope.login)
@@ -12,7 +13,7 @@ walkinApp.controller("loginController", function($scope, Restangular,$cordovaToa
       }else {
 				$location.path("/home");
       }
-    });
+    });*/
 			/*$cordovaSpinnerDialog.show("","Loading",true);
 			Restangular.one("/authenticate").post('',$scope.login).then(function(data){
 				$cordovaSpinnerDialog.hide();
@@ -37,10 +38,10 @@ walkinApp.controller("loginController", function($scope, Restangular,$cordovaToa
 
 				});
 				console.log(error);
-			});*/
+			});
 		}else {
 			$window.alert("Enter Credentials for login");
-		}
+		}*/
 };
 
 });

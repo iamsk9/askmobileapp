@@ -1,0 +1,32 @@
+<div layout = "column" layout-align = "center center">
+    <md-card class = "loginCard md-whiteframe-z3" style = "width : 80%">
+        <md-card-title>
+            <md-card-title-text layout = "column" layout-align = "center center">
+              <span class="md-headline">Personal details</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-content class="md-padding">
+            <form name = "shoppingForm">
+                <div layout = "column" layout-align = "center center">
+                  <md-input-container style = "width : 200px">
+                    <label>Family info</label>
+                    <input type="text" required = "" name = "businessName" ng-model = "personal.finfo">
+                  </md-input-container>
+                  <md-input-container style = "width : 200px">
+                    <label>Hobbies</label>
+                    <input type="text" required = "" name = "businessName" ng-model = "personal.hobbies">
+                  </md-input-container>
+                  <md-input-container style = "width : 200px">
+                    <label>Interests</label>
+                    <input type="text" required = "" name = "businessName" ng-model = "personal.interests">
+                  </md-input-container>
+                  <md-input-container style = "width : 200px">
+                    <label>City</label>
+                    <input type="text" required = "" name = "businessName" ng-model = "personal.city">
+                  </md-input-container>
+                    <md-button class = "md-raised md-primary" ng-click = "submit()" style = "width:200px">Next</md-button>
+                </div>
+            </form>
+        </md-content>
+    </md-card>
+</div>

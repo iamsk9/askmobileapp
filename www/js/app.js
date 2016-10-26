@@ -57,19 +57,19 @@ walkinApp.config(function($mdThemingProvider, $mdIconProvider, $routeProvider,
     RestangularProvider.setDefaultHeaders({'Access-Control-Allow-Origin' : '*'});
     $routeProvider
         .when("/login", {
-            templateUrl :  "_login.html",
+            templateUrl :  "home.html",
             controller  : "loginController"
         })
-        .when("/home", {
-            templateUrl :  "_home.html",
+        .when("/business", {
+            templateUrl :  "business.html",
             controller : "homeController"
         })
-        .when("/shopping", {
-            templateUrl :  "_shoppingDetails.html",
+        .when("/personal", {
+            templateUrl :  "personal.html",
             controller : "shoppingDetailsController"
         })
-        .when("/ratings", {
-            templateUrl : "_ratings.html",
+        .when("/misc", {
+            templateUrl : "misc.html",
             controller : "ratingsController"
         });
 });
@@ -89,4 +89,3 @@ walkinApp.run(function($rootScope, $cordovaPreferences, $location, Restangular, 
     });
     $location.path('/login');
 });
-
